@@ -272,6 +272,7 @@ class Application():
         # モーターを停止
         self.set_and_sleep(0, 0)
         self.motor_running=False
+        self.save_to_csv("自動保存")
 
     def start_motor_thread(self, start_rpm, end_rpm, num_steps, step_duration, interval_duration):
         # モーター制御スレッドを開始
